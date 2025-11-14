@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Shorts Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <style>
+    body{font-family: Arial, sans-serif; padding:20px; max-width:700px; margin:auto}
+    .box{border:1px solid #ddd;padding:16px;border-radius:8px}
+    label{display:block;margin-top:12px}
+  </style>
+</head>
+<body>
+  <h1>Shorts Generator (Local)</h1>
+  <div class="box">
+    <form id="form" action="/generate" method="post" enctype="multipart/form-data">
+      <label>Images (2-3): <input type="file" name="images" accept="image/*" multiple required /></label>
+      <label>Audio (mp3/wav): <input type="file" name="audio" accept="audio/*" required /></label>
+      <label>Subtitle text (paste full script):</label>
+      <textarea name="subtitle_text" rows="8" style="width:100%" placeholder="Paste your subtitle / script here" required></textarea>
+      <div style="margin-top:12px">
+        <button type="submit">Generate Video</button>
+      </div>
+    </form>
+  </div>
+  <p style="margin-top:14px;color:#666">After submit, the page will redirect to a download link when done. Generating may take a few seconds—depending on length and CPU.</p>
+</body>
+</html>
